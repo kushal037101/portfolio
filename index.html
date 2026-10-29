@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kushal Pandya — Student Portfolio. Projects, skills, education and contact." />
+  <meta name="author" content="Kushal Pandya" />
+  <title>Kushal Pandya | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!--
+    ╔══════════════════════════════════════════════════════════════╗
+    ║  CUSTOMISATION GUIDE                                         ║
+    ║  Search for "TODO:" comments throughout this file to find   ║
+    ║  every placeholder you should replace with your own info.   ║
+    ╚══════════════════════════════════════════════════════════════╝
+  -->
+</head>
+<body>
+
+  <!-- ░░ Animated ambient background ░░ -->
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════════════════════════════════════
+       NAVBAR
+       ════════════════════════════════════════════════════════════ -->
+  <!--
+    CSS-only mobile menu:
+    The checkbox is placed BEFORE the nav so the sibling selector
+    (.nav-toggle:checked ~ nav .nav-links) works in pure CSS.
+    The <label> inside the nav acts as the visible hamburger button.
+  -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <!-- Logo -->
+      <a href="#home" class="nav-logo" aria-label="Kushal Pandya — Home">KP</a>
+
+      <!-- Hamburger icon (visible on mobile) -->
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <!-- Nav links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <!-- TODO: Replace href with your actual email -->
+        <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ════════════════════════════════════════════════════════
+         SECTION 1 — HOME / HERO
+         ════════════════════════════════════════════════════════ -->
+    <section id="home" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-wrapper">
+
+          <!-- Left column: text -->
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="dot"></span>
+              <!-- TODO: Change status badge text (e.g. "Open to Internships", "Final Year Student") -->
+              Open to Opportunities
+            </div>
+
+            <p class="hero-greeting">Hi there, I'm</p>
+            <!-- TODO: Update your name if needed -->
+            <h1 class="hero-name" id="hero-heading">
+              <span class="gradient-text">Kushal</span><br />Pandya
+            </h1>
+
+            <p class="hero-title">
+              <!-- TODO: Replace with your actual role / tagline -->
+              <span class="typed-text">Student &amp; Aspiring Developer</span>
+            </p>
+
+            <p class="hero-description">
+              <!-- TODO: Write a short 2–3 sentence intro about yourself -->
+              Passionate about building impactful solutions through code.
+              Currently pursuing my studies while exploring the world of
+              software development, one project at a time.
+            </p>
+
+            <div class="hero-actions">
+              <!-- TODO: Link to your resume PDF; place file in the project folder -->
+              <a href="resume.pdf" class="btn btn-primary" download>
+                ⬇ Download Resume
+              </a>
+              <a href="#projects" class="btn btn-outline">
+                View My Work
+              </a>
+            </div>
+
+            <!-- Social icons row -->
+            <div class="hero-socials">
+              <span>Find me on</span>
+              <!-- TODO: Replace # with your actual profile URLs -->
+              <a href="#" class="social-icon" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">
+                <!-- GitHub icon (Unicode approximation; swap for SVG if desired) -->
+                ⌥
+              </a>
+              <a href="#" class="social-icon" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">
+                in
+              </a>
+              <a href="#" class="social-icon" aria-label="Twitter / X" title="Twitter" target="_blank" rel="noopener">
+                𝕏
+              </a>
+              <!-- TODO: Add or remove social icons as needed -->
+            </div>
+          </div><!-- /hero-content -->
+
+          <!-- Right column: profile image + decorative chips -->
+          <div class="hero-visual">
+            <!-- Floating accent chips -->
+            <div class="hero-chip">
+              <span class="chip-dot blue"></span>
+              <!-- TODO: Change chip label (e.g. your current course) -->
+              CS Student
+            </div>
+            <div class="hero-chip">
+              <span class="chip-dot purple"></span>
+              <!-- TODO: Change chip label (e.g. your GPA or a hobby) -->
+              Problem Solver
+            </div>
+
+            <!-- Profile picture frame -->
+            <div class="profile-frame" role="img" aria-label="Profile photo of Kushal Pandya">
+              <div class="profile-img-wrap">
+                <!--
+                  TODO: Place your photo at images/profile.jpg
+                  The placeholder below is shown when the image is missing.
+                -->
+                <img
+                  src="images/profile.jpg"
+                  alt="Kushal Pandya"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="profile-placeholder" style="display:none;">
+                  <span class="avatar-icon">👤</span>
+                  <span>Add images/profile.jpg</span>
+                </div>
+              </div>
+            </div>
+          </div><!-- /hero-visual -->
+
+        </div><!-- /hero-wrapper -->
+      </div><!-- /container -->
+
+      <!-- Scroll hint -->
+      <div class="scroll-hint" aria-hidden="true">
+        <div class="mouse"><div class="wheel"></div></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <div class="gradient-divider" aria-hidden="true"></div>
+
+    <!-- ════════════════════════════════════════════════════════
+         SECTION 2 — ABOUT ME
+         ════════════════════════════════════════════════════════ -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+
+        <!-- About card (left) -->
+        <div class="about-visual">
+          <article class="about-card">
+            <!-- Small avatar -->
+            <div class="about-avatar">
+              <img
+                src="images/profile.jpg"
+                alt="Kushal Pandya"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="about-avatar-placeholder" style="display:none;">👤</div>
+            </div>
+            <p class="about-card-name">Kushal Pandya</p>
+            <!-- TODO: Replace with your actual course / university -->
+            <p class="about-card-role">B.Tech Computer Science · XYZ University</p>
+
+            <!-- Quick stats -->
+            <div class="about-stats">
+              <div class="stat-item">
+                <!-- TODO: Replace with actual project count -->
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Projects Done</div>
+              </div>
+              <div class="stat-item">
+                <!-- TODO: Replace with your year of study -->
+                <div class="stat-number">3rd</div>
+                <div class="stat-label">Year of Study</div>
+              </div>
+              <div class="stat-item">
+                <!-- TODO: Replace with number of skills / technologies -->
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Technologies</div>
+              </div>
+              <div class="stat-item">
+                <!-- TODO: Replace with hackathons / events attended -->
+                <div class="stat-number">3</div>
+                <div class="stat-label">Hackathons</div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- About text (right) -->
+        <div class="about-text">
+          <div class="section-header">
+            <span class="section-label">About Me</span>
+            <h2 class="section-title" id="about-heading">
+              Passionate Learner &amp;<br /><span class="hl">Future Engineer</span>
+            </h2>
+          </div>
+
+          <!-- TODO: Replace paragraphs with your own story -->
+          <p>
+            Hello! I'm Kushal Pandya, a motivated Computer Science student with a
+            deep interest in software development and problem-solving. I enjoy
+            turning complex problems into simple, elegant solutions through code.
+          </p>
+          <p>
+            When I'm not studying, you'll find me working on personal projects,
+            participating in hackathons, or exploring new technologies. I believe
+            in learning by building and I'm always eager to take on new challenges.
+          </p>
+
+          <!-- Career goals -->
+          <div class="about-goals">
+            <h4>🎯 Career Goals</h4>
+            <!-- TODO: Replace with your actual career goals -->
+            <div class="goal-item">Land a software engineering internship in 2025</div>
+            <div class="goal-item">Contribute to open-source projects</div>
+            <div class="goal-item">Build products that solve real-world problems</div>
+            <div class="goal-item">Specialize in full-stack or cloud development</div>
+          </div>
+
+          <div style="margin-top: 2rem;">
+            <a href="#contact" class="btn btn-primary">Let's Connect</a>
+          </div>
+        </div>
+
+      </div><!-- /container -->
+    </section>
+
+    <div class="gradient-divider" aria-hidden="true"></div>
+
+    <!-- ════════════════════════════════════════════════════════
+         SECTION 3 — SKILLS
+         ════════════════════════════════════════════════════════ -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <div class="container">
+        <header class="section-header center">
+          <span class="section-label">What I Know</span>
+          <h2 class="section-title" id="skills-heading">
+            My <span class="hl">Skills &amp; Tools</span>
+          </h2>
+          <p class="section-sub">
+            <!-- TODO: Update the description to match your actual skill set -->
+            A collection of technologies and tools I've worked with during
+            my studies and personal projects.
+          </p>
+        </header>
+
+        <!--
+          TODO: Customise each skill card:
+            • Change the emoji icon
+            • Update skill-name and skill-category
+            • Adjust the skill-bar-fill width (e.g. style="width:70%") to reflect proficiency
+            • Update the skill-level text (Beginner / Intermediate / Advanced)
+          Add or remove <article> blocks to match your actual skill set.
+        -->
+        <div class="skills-grid">
+
+          <!-- Skill Card 1 -->
+          <article class="skill-card">
+            <div class="skill-icon">🐍</div>
+            <p class="skill-name">Python</p>
+            <p class="skill-category">Programming Language</p>
+            <div class="skill-bar-track">
+              <!-- TODO: Change width (0–100%) to reflect your proficiency -->
+              <div class="skill-bar-fill" style="width: 75%;"></div>
+            </div>
+            <p class="skill-level">Intermediate — 75%</p>
+          </article>
+
+          <!-- Skill Card 2 -->
+          <article class="skill-card">
+            <div class="skill-icon">🌐</div>
+            <p class="skill-name">HTML &amp; CSS</p>
+            <p class="skill-category">Web Frontend</p>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width: 80%;"></div>
+            </div>
+            <p class="skill-level">Intermediate — 80%</p>
+          </article>
+
+          <!-- Skill Card 3 -->
+          <article class="skill-card">
+            <div class="skill-icon">⚡</div>
+            <p class="skill-name">JavaScript</p>
+            <p class="skill-category">Web Frontend</p>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width: 60%;"></div>
+            </div>
+            <p class="skill-level">Beginner — 60%</p>
+          </article>
+
+          <!-- Skill Card 4 -->
+          <article class="skill-card">
+            <div class="skill-icon">☕</div>
+            <p class="skill-name">Java</p>
+            <p class="skill-category">Programming Language</p>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width: 65%;"></div>
+            </div>
+            <p class="skill-level">Intermediate — 65%</p>
+          </article>
+
+          <!-- Skill Card 5 -->
+          <article class="skill-card">
+            <div class="skill-icon">🗄️</div>
+            <p class="skill-name">SQL</p>
+            <p class="skill-category">Database</p>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width: 55%;"></div>
+            </div>
+            <p class="skill-level">Beginner — 55%</p>
+          </article>
+
+          <!-- Skill Card 6 -->
+          <article class="skill-card">
+            <div class="skill-icon">🔀</div>
+            <p class="skill-name">Git &amp; GitHub</p>
+            <p class="skill-category">Version Control</p>
+            <div class="skill-bar-track">
+              <div class="skill-bar-fill" style="width: 70%;"></div>
+            </div>
+            <p class="skill-level">Intermediate — 70%</p>
+          </article>
+
+          <!-- TODO: Add more skill cards following the same pattern -->
+
+        </div><!-- /skills-grid -->
+      </div><!-- /container -->
+    </section>
+
+    <div class="gradient-divider" aria-hidden="true"></div>
+
+    <!-- ════════════════════════════════════════════════════════
+         SECTION 4 — ACHIEVEMENTS
+         ════════════════════════════════════════════════════════ -->
+    <section id="achievements" aria-labelledby="achievements-heading">
+      <div class="container">
+        <header class="section-header center">
+          <span class="section-label">Milestones</span>
+          <h2 class="section-title" id="achievements-heading">
+            Achievements &amp; <span class="hl">Certificates</span>
+          </h2>
+          <p class="section-sub">
+            <!-- TODO: Update this description -->
+            Recognitions and certifications earned throughout my academic
+            and personal journey.
+          </p>
+        </header>
+
+        <!--
+          TODO: Replace each achievement card with your real awards / certificates.
+          • ach-gold / ach-blue / ach-green / ach-purple — icon background colour
+          • Change the emoji, title, description, and tag
+          Add or remove cards as needed.
+        -->
+        <div class="achievements-grid">
+
+          <article class="achievement-card">
+            <div class="achievement-icon ach-gold">🏆</div>
+            <div class="achievement-body">
+              <!-- TODO: Replace with your actual achievement -->
+              <h3>Hackathon Winner — 1st Place</h3>
+              <p>Won first place at [Hackathon Name] for building [Project Name] within 24 hours.</p>
+              <span class="achievement-tag">2024</span>
+            </div>
+          </article>
+
+          <article class="achievement-card">
+            <div class="achievement-icon ach-blue">📜</div>
+            <div class="achievement-body">
+              <!-- TODO: Replace with your actual certificate -->
+              <h3>Python for Everybody — Certificate</h3>
+              <p>Completed the Python specialisation course on [Platform Name] with distinction.</p>
+              <span class="achievement-tag">Coursera</span>
+            </div>
+          </article>
+
+          <article class="achievement-card">
+            <div class="achievement-icon ach-green">🎓</div>
+            <div class="achievement-body">
+              <!-- TODO: Replace with your actual achievement -->
+              <h3>Dean's List — Semester 4</h3>
+              <p>Recognised for outstanding academic performance with a GPA above 9.0.</p>
+              <span class="achievement-tag">Academic</span>
+            </div>
+          </article>
+
+          <article class="achievement-card">
+            <div class="achievement-icon ach-purple">🌟</div>
+            <div class="achievement-body">
+              <!-- TODO: Replace with your actual achievement -->
+              <h3>Open Source Contributor</h3>
+              <p>Made meaningful contributions to [Repository Name] fixing bugs and adding features.</p>
+              <span class="achievement-tag">Open Source</span>
+            </div>
+          </article>
+
+          <article class="achievement-card">
+            <div class="achievement-icon ach-gold">🏅</div>
+            <div class="achievement-body">
+              <!-- TODO: Replace with your actual achievement -->
+              <h3>Best Paper Award</h3>
+              <p>Presented a paper on [Topic] at [Conference / Symposium Name] and received the best paper award.</p>
+              <span class="achievement-tag">Research</span>
+            </div>
+          </article>
+
+          <article class="achievement-card">
+            <div class="achievement-icon ach-blue">☁️</div>
+            <div class="achievement-body">
+              <!-- TODO: Replace with your actual certificate -->
+              <h3>Cloud Fundamentals — Certificate</h3>
+              <p>Earned certification in [Cloud Provider] fundamentals covering core services and architecture.</p>
+              <span class="achievement-tag">Cloud</span>
+            </div>
+          </article>
+
+        </div><!-- /achievements-grid -->
+      </div><!-- /container -->
+    </section>
+
+    <div class="gradient-divider" aria-hidden="true"></div>
+
+    <!-- ════════════════════════════════════════════════════════
+         SECTION 5 — PROJECTS
+         ════════════════════════════════════════════════════════ -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <header class="section-header center">
+          <span class="section-label">My Work</span>
+          <h2 class="section-title" id="projects-heading">
+            Featured <span class="hl">Projects</span>
+          </h2>
+          <p class="section-sub">
+            <!-- TODO: Update this description -->
+            A selection of projects I've built to learn, experiment, and solve problems.
+          </p>
+        </header>
+
+        <!--
+          TODO: Replace each project card with your actual projects:
+            • Change the emoji / thumbnail background gradient
+            • Update status badge: status-done / status-wip / status-idea
+            • Fill in project-title, project-desc, tags
+            • Replace # in project-link hrefs with your GitHub / Live URL
+          Add or remove cards as needed.
+        -->
+        <div class="projects-grid">
+
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-thumb">
+              <!-- TODO: Replace emoji with a screenshot <img> once you have one -->
+              <div class="project-thumb-bg" style="background: linear-gradient(135deg, #0d1b3e, #1a2a5e);">
+                🌐
+              </div>
+              <span class="project-status status-done">Completed</span>
+            </div>
+            <div class="project-body">
+              <!-- TODO: Replace with your actual project name -->
+              <h3 class="project-title">Personal Portfolio Website</h3>
+              <p class="project-desc">
+                <!-- TODO: Replace with your actual project description -->
+                A responsive portfolio website built from scratch using HTML5 and CSS3.
+                Features dark theme, smooth animations, and a clean layout.
+              </p>
+              <div class="project-tags">
+                <!-- TODO: Update tags to match your tech stack -->
+                <span class="tag">HTML5</span>
+                <span class="tag">CSS3</span>
+                <span class="tag">Responsive</span>
+              </div>
+              <div class="project-links">
+                <!-- TODO: Replace # with your GitHub repo URL -->
+                <a href="#" class="project-link" target="_blank" rel="noopener">
+                  <span class="icon">⌥</span> GitHub
+                </a>
+                <!-- TODO: Replace # with your live demo URL (or remove if no demo) -->
+                <a href="#" class="project-link" target="_blank" rel="noopener">
+                  <span class="icon">↗</span> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-thumb">
+              <div class="project-thumb-bg" style="background: linear-gradient(135deg, #1a0a2e, #2d1060);">
+                🤖
+              </div>
+              <span class="project-status status-wip">In Progress</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">
+                <!-- TODO: Replace with your actual project name -->
+                AI-Powered Chatbot
+              </h3>
+              <p class="project-desc">
+                <!-- TODO: Replace with your actual project description -->
+                A rule-based chatbot built in Python that answers FAQs for a
+                college department. Currently adding NLP capabilities.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Flask</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" target="_blank" rel="noopener">
+                  <span class="icon">⌥</span> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-thumb">
+              <div class="project-thumb-bg" style="background: linear-gradient(135deg, #001a10, #004d2e);">
+                🛒
+              </div>
+              <span class="project-status status-done">Completed</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">
+                <!-- TODO: Replace with your actual project name -->
+                E-commerce Store Clone
+              </h3>
+              <p class="project-desc">
+                <!-- TODO: Replace with your actual project description -->
+                A fully functional front-end clone of an e-commerce site with
+                product listings, cart, and responsive design.
+              </p>
+              <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" target="_blank" rel="noopener">
+                  <span class="icon">⌥</span> GitHub
+                </a>
+                <a href="#" class="project-link" target="_blank" rel="noopener">
+                  <span class="icon">↗</span> Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card">
+            <div class="project-thumb">
+              <div class="project-thumb-bg" style="background: linear-gradient(135deg, #1a0a00, #4d2600);">
+                📊
+              </div>
+              <span class="project-status status-idea">Concept</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">
+                <!-- TODO: Replace with your actual project name -->
+                Data Dashboard
+              </h3>
+              <p class="project-desc">
+                <!-- TODO: Replace with your actual project description -->
+                An interactive data visualisation dashboard for analysing student
+                performance data. Built as a college mini-project.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Matplotlib</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="project-link" target="_blank" rel="noopener">
+                  <span class="icon">⌥</span> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- TODO: Add more project cards following the same pattern -->
+
+        </div><!-- /projects-grid -->
+      </div><!-- /container -->
+    </section>
+
+    <div class="gradient-divider" aria-hidden="true"></div>
+
+    <!-- ════════════════════════════════════════════════════════
+         SECTION 6 — EDUCATION
+         ════════════════════════════════════════════════════════ -->
+    <section id="education" aria-labelledby="education-heading">
+      <div class="container">
+        <header class="section-header center">
+          <span class="section-label">My Journey</span>
+          <h2 class="section-title" id="education-heading">
+            Academic <span class="hl">Background</span>
+          </h2>
+        </header>
+
+        <!--
+          TODO: Replace each edu-item with your actual academic history.
+            • Update period, degree, school, description, and GPA badge.
+          Add or remove items as needed.
+        -->
+        <div class="education-timeline">
+
+          <!-- Education Item 1 — Most Recent First -->
+          <div class="edu-item">
+            <div class="edu-dot" aria-hidden="true">🎓</div>
+            <div class="edu-card">
+              <!-- TODO: Replace with your actual years -->
+              <p class="edu-period">2022 – Present</p>
+              <!-- TODO: Replace with your actual degree -->
+              <h3 class="edu-degree">Bachelor of Technology — Computer Science &amp; Engineering</h3>
+              <!-- TODO: Replace with your actual university -->
+              <p class="edu-school">XYZ University, City, State</p>
+              <!-- TODO: Replace with actual coursework / highlights -->
+              <p class="edu-desc">
+                Relevant coursework: Data Structures &amp; Algorithms, Database Systems,
+                Operating Systems, Computer Networks, Software Engineering.
+              </p>
+              <!-- TODO: Replace with your actual GPA -->
+              <span class="edu-gpa">CGPA: 8.5 / 10</span>
+            </div>
+          </div>
+
+          <!-- Education Item 2 -->
+          <div class="edu-item">
+            <div class="edu-dot" aria-hidden="true">📚</div>
+            <div class="edu-card">
+              <!-- TODO: Replace with your actual years -->
+              <p class="edu-period">2020 – 2022</p>
+              <!-- TODO: Replace with your actual qualification -->
+              <h3 class="edu-degree">Higher Secondary Certificate (HSC) — Science</h3>
+              <!-- TODO: Replace with your actual school -->
+              <p class="edu-school">ABC Junior College, City, State</p>
+              <!-- TODO: Replace with actual highlights -->
+              <p class="edu-desc">
+                Subjects: Physics, Chemistry, Mathematics, English.
+                Participated in inter-school science exhibition and quiz competitions.
+              </p>
+              <!-- TODO: Replace with your actual percentage / grade -->
+              <span class="edu-gpa">Percentage: 88%</span>
+            </div>
+          </div>
+
+          <!-- Education Item 3 -->
+          <div class="edu-item">
+            <div class="edu-dot" aria-hidden="true">🏫</div>
+            <div class="edu-card">
+              <!-- TODO: Replace with your actual years -->
+              <p class="edu-period">2010 – 2020</p>
+              <!-- TODO: Replace with your actual qualification -->
+              <h3 class="edu-degree">Secondary School Certificate (SSC)</h3>
+              <!-- TODO: Replace with your actual school -->
+              <p class="edu-school">DEF High School, City, State</p>
+              <p class="edu-desc">
+                Completed schooling with distinction. Active member of the
+                computer science and robotics clubs.
+              </p>
+              <!-- TODO: Replace with your actual percentage / grade -->
+              <span class="edu-gpa">Percentage: 92%</span>
+            </div>
+          </div>
+
+          <!-- TODO: Add more education items if needed -->
+
+        </div><!-- /education-timeline -->
+      </div><!-- /container -->
+    </section>
+
+    <div class="gradient-divider" aria-hidden="true"></div>
+
+    <!-- ════════════════════════════════════════════════════════
+         SECTION 7 — CONTACT
+         ════════════════════════════════════════════════════════ -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <header class="section-header center">
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-title" id="contact-heading">
+            Let's <span class="hl">Connect</span>
+          </h2>
+          <p class="section-sub">
+            Have a question, want to collaborate, or just say hello?
+            I'd love to hear from you!
+          </p>
+        </header>
+
+        <div class="contact-wrapper">
+
+          <!-- Left: info -->
+          <div class="contact-info">
+            <h3>Reach Out Directly</h3>
+            <p>
+              <!-- TODO: Update this blurb -->
+              I'm currently open to internships, collaborations, and interesting
+              conversations. Feel free to drop me a message any time.
+            </p>
+
+            <div class="contact-items">
+              <!-- TODO: Replace with your actual email -->
+              <a href="mailto:your.email@example.com" class="contact-item">
+                <div class="contact-item-icon">✉️</div>
+                <span>your.email@example.com</span>
+              </a>
+
+              <!-- TODO: Replace with your actual phone (or remove entirely) -->
+              <div class="contact-item">
+                <div class="contact-item-icon">📱</div>
+                <span>+91 XXXXX XXXXX</span>
+              </div>
+
+              <!-- TODO: Replace with your actual location -->
+              <div class="contact-item">
+                <div class="contact-item-icon">📍</div>
+                <span>City, State, India</span>
+              </div>
+            </div>
+
+            <!-- Social links -->
+            <div class="social-links-row">
+              <!-- TODO: Replace # with your actual URLs -->
+              <a href="#" class="social-link-pill" target="_blank" rel="noopener">
+                ⌥ GitHub
+              </a>
+              <a href="#" class="social-link-pill" target="_blank" rel="noopener">
+                in LinkedIn
+              </a>
+              <a href="#" class="social-link-pill" target="_blank" rel="noopener">
+                𝕏 Twitter
+              </a>
+              <!-- TODO: Add Instagram, Discord, etc. as needed -->
+            </div>
+          </div>
+
+          <!-- Right: contact form -->
+          <div class="contact-form-card">
+            <!--
+              NOTE: This is a static HTML form — it does NOT send email on its own.
+              To make it functional, either:
+              1. Connect it to a service like Formspree (change action to your Formspree URL)
+              2. Use Netlify Forms (add netlify attribute)
+              3. Add your own backend
+
+              TODO: Update the action URL when you set up a form handler.
+            -->
+            <form
+              action="#"
+              method="POST"
+              aria-label="Contact form"
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">Name</label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    placeholder="Your Name"
+                    required
+                    autocomplete="name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Email</label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                    autocomplete="email"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <input
+                  type="text"
+                  id="contact-subject"
+                  name="subject"
+                  placeholder="What's this about?"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  placeholder="Write your message here…"
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="form-submit">
+                Send Message ✉️
+              </button>
+            </form>
+          </div>
+
+        </div><!-- /contact-wrapper -->
+      </div><!-- /container -->
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <!-- Logo -->
+        <span class="footer-logo">KP</span>
+
+        <!-- Copyright -->
+        <p class="footer-copy">
+          <!-- TODO: Update year as needed -->
+          &copy; 2025 Kushal Pandya. All rights reserved.
+        </p>
+
+        <!-- Quick links -->
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
