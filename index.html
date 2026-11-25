@@ -3,836 +3,916 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Kushal Pandya — Student Portfolio. Projects, skills, education and contact." />
+  <meta name="description" content="Kushal Pandya — First-Year B.Tech CSE (AI & ML) Student at Newton School of Technology, Pune. Portfolio showcasing projects, coding profiles, technical skills, and education." />
   <meta name="author" content="Kushal Pandya" />
-  <title>Kushal Pandya | Portfolio</title>
+  <title>Kushal Pandya | B.Tech CSE (AI &amp; ML) Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!--
-    ╔══════════════════════════════════════════════════════════════╗
-    ║  CUSTOMISATION GUIDE                                         ║
-    ║  Search for "TODO:" comments throughout this file to find   ║
-    ║  every placeholder you should replace with your own info.   ║
-    ╚══════════════════════════════════════════════════════════════╝
-  -->
 </head>
 <body>
 
-  <!-- ░░ Animated ambient background ░░ -->
+  <!-- Ambient glowing decorative backgrounds -->
   <div class="bg-glow" aria-hidden="true"></div>
+  <div class="bg-mesh" aria-hidden="true"></div>
 
   <!-- ════════════════════════════════════════════════════════════
-       NAVBAR
+       STICKY NAVBAR
        ════════════════════════════════════════════════════════════ -->
-  <!--
-    CSS-only mobile menu:
-    The checkbox is placed BEFORE the nav so the sibling selector
-    (.nav-toggle:checked ~ nav .nav-links) works in pure CSS.
-    The <label> inside the nav acts as the visible hamburger button.
-  -->
-  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+  <!-- Checkbox for pure CSS responsive mobile drawer -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" />
 
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="container">
-      <!-- Logo -->
-      <a href="#home" class="nav-logo" aria-label="Kushal Pandya — Home">KP</a>
+  <header class="navbar-wrapper">
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <div class="container nav-container">
+        <!-- Brand Logo -->
+        <a href="#home" class="nav-logo" aria-label="Kushal Pandya Portfolio Home">
+          <span class="logo-accent">K</span>P
+        </a>
 
-      <!-- Hamburger icon (visible on mobile) -->
-      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
+        <!-- Hamburger Icon for Mobile Screens -->
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
 
-      <!-- Nav links -->
-      <ul class="nav-links" role="list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#achievements">Achievements</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <!-- TODO: Replace href with your actual email -->
-        <li><a href="#contact" class="nav-cta">Hire Me</a></li>
-      </ul>
-    </div>
-  </nav>
+        <!-- Navigation Links -->
+        <ul class="nav-links" role="list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#coding-profiles">Profiles</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact" class="nav-cta">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
   <main>
 
     <!-- ════════════════════════════════════════════════════════
          SECTION 1 — HOME / HERO
          ════════════════════════════════════════════════════════ -->
-    <section id="home" aria-labelledby="hero-heading">
-      <div class="container">
-        <div class="hero-wrapper">
+    <section id="home" class="hero-section" aria-labelledby="hero-title">
+      <div class="container hero-container">
+        
+        <!-- Left: Text content -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-indicator"></span>
+            <span>First-Year B.Tech CSE (AI &amp; ML) · NST Pune</span>
+          </div>
 
-          <!-- Left column: text -->
-          <div class="hero-content">
-            <div class="hero-badge">
-              <span class="dot"></span>
-              <!-- TODO: Change status badge text (e.g. "Open to Internships", "Final Year Student") -->
-              Open to Opportunities
-            </div>
+          <p class="hero-greeting">Hi, I'm</p>
+          <h1 class="hero-name" id="hero-title">
+            <span class="gradient-text">KUSHAL</span> PANDYA
+          </h1>
 
-            <p class="hero-greeting">Hi there, I'm</p>
-            <!-- TODO: Update your name if needed -->
-            <h1 class="hero-name" id="hero-heading">
-              <span class="gradient-text">Kushal</span><br />Pandya
-            </h1>
+          <h2 class="hero-headline">
+            B.Tech CSE Student <span class="divider-dot">|</span> AI &amp; ML Enthusiast <span class="divider-dot">|</span> Python Programmer
+          </h2>
 
-            <p class="hero-title">
-              <!-- TODO: Replace with your actual role / tagline -->
-              <span class="typed-text">Student &amp; Aspiring Developer</span>
-            </p>
+          <p class="hero-intro">
+            Hi, I'm Kushal Pandya, a first-year B.Tech student at Newton School of Technology, Pune, specializing in Computer Science and Engineering with Artificial Intelligence and Machine Learning. I enjoy programming, exploring AI technologies, building interesting projects, and continuously improving my technical skills.
+          </p>
 
-            <p class="hero-description">
-              <!-- TODO: Write a short 2–3 sentence intro about yourself -->
-              Passionate about building impactful solutions through code.
-              Currently pursuing my studies while exploring the world of
-              software development, one project at a time.
-            </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#about" class="btn btn-outline">
+              <span>About Me</span>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <span>Contact Me</span>
+            </a>
+            <a href="https://github.com/kushal037101" target="_blank" rel="noopener noreferrer" class="btn btn-github">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
 
-            <div class="hero-actions">
-              <!-- TODO: Link to your resume PDF; place file in the project folder -->
-              <a href="resume.pdf" class="btn btn-primary" download>
-                ⬇ Download Resume
-              </a>
-              <a href="#projects" class="btn btn-outline">
-                View My Work
-              </a>
-            </div>
-
-            <!-- Social icons row -->
-            <div class="hero-socials">
-              <span>Find me on</span>
-              <!-- TODO: Replace # with your actual profile URLs -->
-              <a href="#" class="social-icon" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener">
-                <!-- GitHub icon (Unicode approximation; swap for SVG if desired) -->
-                ⌥
-              </a>
-              <a href="#" class="social-icon" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener">
-                in
-              </a>
-              <a href="#" class="social-icon" aria-label="Twitter / X" title="Twitter" target="_blank" rel="noopener">
-                𝕏
-              </a>
-              <!-- TODO: Add or remove social icons as needed -->
-            </div>
-          </div><!-- /hero-content -->
-
-          <!-- Right column: profile image + decorative chips -->
-          <div class="hero-visual">
-            <!-- Floating accent chips -->
-            <div class="hero-chip">
-              <span class="chip-dot blue"></span>
-              <!-- TODO: Change chip label (e.g. your current course) -->
-              CS Student
-            </div>
-            <div class="hero-chip">
-              <span class="chip-dot purple"></span>
-              <!-- TODO: Change chip label (e.g. your GPA or a hobby) -->
-              Problem Solver
-            </div>
-
-            <!-- Profile picture frame -->
-            <div class="profile-frame" role="img" aria-label="Profile photo of Kushal Pandya">
-              <div class="profile-img-wrap">
+        <!-- Right: Profile Image with Glowing Border -->
+        <div class="hero-visual">
+          <div class="profile-glow-ring">
+            <div class="profile-card">
+              <div class="profile-image-container">
                 <!--
-                  TODO: Place your photo at images/profile.jpg
-                  The placeholder below is shown when the image is missing.
+                  NOTE: Place your personal portrait image at `images/profile.jpg`.
+                  If not present yet, a styled avatar fallback with glowing initials displays automatically.
                 -->
                 <img
                   src="images/profile.jpg"
-                  alt="Kushal Pandya"
+                  alt="Kushal Pandya - Profile Picture"
+                  class="profile-img"
                   onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                 />
-                <div class="profile-placeholder" style="display:none;">
-                  <span class="avatar-icon">👤</span>
-                  <span>Add images/profile.jpg</span>
+                <div class="profile-fallback" style="display: none;" aria-label="Profile image placeholder">
+                  <span class="fallback-monogram">KP</span>
+                  <span class="fallback-caption">Kushal Pandya</span>
                 </div>
               </div>
             </div>
-          </div><!-- /hero-visual -->
+          </div>
+          <!-- Decorative floating tech badges -->
+          <div class="hero-chip chip-left">
+            <span class="chip-dot"></span>
+            <span>AI &amp; ML</span>
+          </div>
+          <div class="hero-chip chip-right">
+            <span class="chip-dot dot-alt"></span>
+            <span>Python &amp; LLMs</span>
+          </div>
+        </div>
 
-        </div><!-- /hero-wrapper -->
-      </div><!-- /container -->
+      </div>
 
-      <!-- Scroll hint -->
-      <div class="scroll-hint" aria-hidden="true">
-        <div class="mouse"><div class="wheel"></div></div>
-        <span>Scroll</span>
+      <div class="scroll-indicator" aria-hidden="true">
+        <a href="#about" aria-label="Scroll to About section">
+          <span class="mouse-icon"><span class="mouse-wheel"></span></span>
+        </a>
       </div>
     </section>
 
-    <div class="gradient-divider" aria-hidden="true"></div>
+    <div class="section-divider" aria-hidden="true"></div>
 
     <!-- ════════════════════════════════════════════════════════
          SECTION 2 — ABOUT ME
          ════════════════════════════════════════════════════════ -->
-    <section id="about" aria-labelledby="about-heading">
+    <section id="about" class="about-section" aria-labelledby="about-title">
       <div class="container">
-
-        <!-- About card (left) -->
-        <div class="about-visual">
-          <article class="about-card">
-            <!-- Small avatar -->
-            <div class="about-avatar">
-              <img
-                src="images/profile.jpg"
-                alt="Kushal Pandya"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-              />
-              <div class="about-avatar-placeholder" style="display:none;">👤</div>
-            </div>
-            <p class="about-card-name">Kushal Pandya</p>
-            <!-- TODO: Replace with your actual course / university -->
-            <p class="about-card-role">B.Tech Computer Science · XYZ University</p>
-
-            <!-- Quick stats -->
-            <div class="about-stats">
-              <div class="stat-item">
-                <!-- TODO: Replace with actual project count -->
-                <div class="stat-number">5+</div>
-                <div class="stat-label">Projects Done</div>
-              </div>
-              <div class="stat-item">
-                <!-- TODO: Replace with your year of study -->
-                <div class="stat-number">3rd</div>
-                <div class="stat-label">Year of Study</div>
-              </div>
-              <div class="stat-item">
-                <!-- TODO: Replace with number of skills / technologies -->
-                <div class="stat-number">10+</div>
-                <div class="stat-label">Technologies</div>
-              </div>
-              <div class="stat-item">
-                <!-- TODO: Replace with hackathons / events attended -->
-                <div class="stat-number">3</div>
-                <div class="stat-label">Hackathons</div>
-              </div>
-            </div>
-          </article>
+        
+        <div class="section-heading-wrapper center">
+          <span class="section-subtitle">Get To Know Me</span>
+          <h2 class="section-title" id="about-title">
+            About <span class="gradient-text">Me</span>
+          </h2>
+          <div class="title-underline"></div>
         </div>
 
-        <!-- About text (right) -->
-        <div class="about-text">
-          <div class="section-header">
-            <span class="section-label">About Me</span>
-            <h2 class="section-title" id="about-heading">
-              Passionate Learner &amp;<br /><span class="hl">Future Engineer</span>
-            </h2>
+        <div class="about-grid">
+          <!-- Left: Quick Info Card -->
+          <div class="about-info-panel">
+            <div class="glass-card info-summary-card">
+              <div class="about-avatar-wrapper">
+                <img
+                  src="images/profile.jpg"
+                  alt="Kushal Pandya - Profile Picture"
+                  class="about-profile-img"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="about-avatar-fallback" style="display: none;" aria-label="Profile image placeholder">
+                  <span class="avatar-letters">KP</span>
+                </div>
+              </div>
+              <h3 class="info-name">Kushal Pandya</h3>
+              <p class="info-sub">Student &amp; Developer</p>
+
+              <div class="info-details-list">
+                <div class="info-detail-item">
+                  <span class="info-label">Degree</span>
+                  <span class="info-value">B.Tech</span>
+                </div>
+                <div class="info-detail-item">
+                  <span class="info-label">Branch</span>
+                  <span class="info-value">Computer Science &amp; Engineering (CSE)</span>
+                </div>
+                <div class="info-detail-item">
+                  <span class="info-label">Specialization</span>
+                  <span class="info-value highlight-val">Artificial Intelligence &amp; Machine Learning (AI &amp; ML)</span>
+                </div>
+                <div class="info-detail-item">
+                  <span class="info-label">College</span>
+                  <span class="info-value">Newton School of Technology, Pune</span>
+                </div>
+                <div class="info-detail-item">
+                  <span class="info-label">Current Year</span>
+                  <span class="info-value">First Year</span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!-- TODO: Replace paragraphs with your own story -->
-          <p>
-            Hello! I'm Kushal Pandya, a motivated Computer Science student with a
-            deep interest in software development and problem-solving. I enjoy
-            turning complex problems into simple, elegant solutions through code.
-          </p>
-          <p>
-            When I'm not studying, you'll find me working on personal projects,
-            participating in hackathons, or exploring new technologies. I believe
-            in learning by building and I'm always eager to take on new challenges.
-          </p>
+          <!-- Right: Narrative Description & Pillars -->
+          <div class="about-narrative-panel">
+            <div class="glass-card narrative-card">
+              <h3 class="narrative-heading">
+                Driven by Curiosity, Building with Code
+              </h3>
+              <p class="narrative-text">
+                I am a passionate technology student interested in programming, artificial intelligence, machine learning, and software development. I enjoy exploring new technologies, experimenting with ideas, and creating projects that solve interesting problems. I am continuously learning and working towards becoming a skilled software and AI engineer.
+              </p>
 
-          <!-- Career goals -->
-          <div class="about-goals">
-            <h4>🎯 Career Goals</h4>
-            <!-- TODO: Replace with your actual career goals -->
-            <div class="goal-item">Land a software engineering internship in 2025</div>
-            <div class="goal-item">Contribute to open-source projects</div>
-            <div class="goal-item">Build products that solve real-world problems</div>
-            <div class="goal-item">Specialize in full-stack or cloud development</div>
-          </div>
+              <div class="about-focus-tags">
+                <span class="focus-tag">Python Programming</span>
+                <span class="focus-tag">Artificial Intelligence</span>
+                <span class="focus-tag">Machine Learning</span>
+                <span class="focus-tag">LLM Pipelines</span>
+                <span class="focus-tag">Web Development</span>
+                <span class="focus-tag">Problem Solving</span>
+              </div>
 
-          <div style="margin-top: 2rem;">
-            <a href="#contact" class="btn btn-primary">Let's Connect</a>
+              <div class="about-cta-row">
+                <a href="#projects" class="btn btn-primary">
+                  <span>Explore Projects</span>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                  <span>Get in Touch</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
-      </div><!-- /container -->
+      </div>
     </section>
 
-    <div class="gradient-divider" aria-hidden="true"></div>
+    <div class="section-divider" aria-hidden="true"></div>
 
     <!-- ════════════════════════════════════════════════════════
-         SECTION 3 — SKILLS
+         SECTION 3 — TECHNICAL SKILLS
          ════════════════════════════════════════════════════════ -->
-    <section id="skills" aria-labelledby="skills-heading">
+    <section id="skills" class="skills-section" aria-labelledby="skills-title">
       <div class="container">
-        <header class="section-header center">
-          <span class="section-label">What I Know</span>
-          <h2 class="section-title" id="skills-heading">
-            My <span class="hl">Skills &amp; Tools</span>
+
+        <div class="section-heading-wrapper center">
+          <span class="section-subtitle">Core Capabilities</span>
+          <h2 class="section-title" id="skills-title">
+            Technical <span class="gradient-text">Skills</span>
           </h2>
-          <p class="section-sub">
-            <!-- TODO: Update the description to match your actual skill set -->
-            A collection of technologies and tools I've worked with during
-            my studies and personal projects.
+          <p class="section-description">
+            A transparent overview of my current programming languages, web fundamentals, and areas of passionate exploration.
           </p>
-        </header>
+          <div class="title-underline"></div>
+        </div>
 
-        <!--
-          TODO: Customise each skill card:
-            • Change the emoji icon
-            • Update skill-name and skill-category
-            • Adjust the skill-bar-fill width (e.g. style="width:70%") to reflect proficiency
-            • Update the skill-level text (Beginner / Intermediate / Advanced)
-          Add or remove <article> blocks to match your actual skill set.
-        -->
-        <div class="skills-grid">
+        <div class="skills-categories-grid">
 
-          <!-- Skill Card 1 -->
-          <article class="skill-card">
-            <div class="skill-icon">🐍</div>
-            <p class="skill-name">Python</p>
-            <p class="skill-category">Programming Language</p>
-            <div class="skill-bar-track">
-              <!-- TODO: Change width (0–100%) to reflect your proficiency -->
-              <div class="skill-bar-fill" style="width: 75%;"></div>
+          <!-- Category 1: Programming Languages -->
+          <div class="skills-category-block">
+            <h3 class="category-title">
+              <span class="category-icon">⚡</span>
+              <span>Programming Languages</span>
+            </h3>
+            <div class="skills-cards-list">
+              
+              <!-- Python -->
+              <div class="skill-card">
+                <div class="skill-header">
+                  <div class="skill-icon-wrapper python-icon">🐍</div>
+                  <div>
+                    <h4 class="skill-name">Python</h4>
+                    <span class="skill-level-badge knowledgeable">Knowledgeable</span>
+                  </div>
+                </div>
+                <p class="skill-detail">Core language for problem solving, scripting, and AI/ML experiments.</p>
+              </div>
+
+              <!-- C -->
+              <div class="skill-card">
+                <div class="skill-header">
+                  <div class="skill-icon-wrapper c-icon">⚙️</div>
+                  <div>
+                    <h4 class="skill-name">C</h4>
+                    <span class="skill-level-badge beginner">Beginner</span>
+                  </div>
+                </div>
+                <p class="skill-detail">Structured programming foundations, pointers, memory concepts, and logic.</p>
+              </div>
+
+              <!-- C++ -->
+              <div class="skill-card">
+                <div class="skill-header">
+                  <div class="skill-icon-wrapper cpp-icon">🧩</div>
+                  <div>
+                    <h4 class="skill-name">C++</h4>
+                    <span class="skill-level-badge beginner">Beginner</span>
+                  </div>
+                </div>
+                <p class="skill-detail">Foundations in object-oriented programming concepts and algorithm implementation.</p>
+              </div>
+
+              <!-- Java -->
+              <div class="skill-card">
+                <div class="skill-header">
+                  <div class="skill-icon-wrapper java-icon">☕</div>
+                  <div>
+                    <h4 class="skill-name">Java</h4>
+                    <span class="skill-level-badge beginner">Beginner</span>
+                  </div>
+                </div>
+                <p class="skill-detail">Learning standard OOP principles, syntax structure, and program compilation.</p>
+              </div>
+
             </div>
-            <p class="skill-level">Intermediate — 75%</p>
-          </article>
+          </div>
 
-          <!-- Skill Card 2 -->
-          <article class="skill-card">
-            <div class="skill-icon">🌐</div>
-            <p class="skill-name">HTML &amp; CSS</p>
-            <p class="skill-category">Web Frontend</p>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" style="width: 80%;"></div>
+          <!-- Category 2: Web Development -->
+          <div class="skills-category-block">
+            <h3 class="category-title">
+              <span class="category-icon">🌐</span>
+              <span>Web Development</span>
+            </h3>
+            <div class="skills-cards-list">
+
+              <!-- HTML5 -->
+              <div class="skill-card">
+                <div class="skill-header">
+                  <div class="skill-icon-wrapper html-icon">📄</div>
+                  <div>
+                    <h4 class="skill-name">HTML5</h4>
+                    <span class="skill-level-badge beginner">Beginner</span>
+                  </div>
+                </div>
+                <p class="skill-detail">Semantic document structuring, accessibility markup, and responsive layouts.</p>
+              </div>
+
+              <!-- CSS3 -->
+              <div class="skill-card">
+                <div class="skill-header">
+                  <div class="skill-icon-wrapper css-icon">🎨</div>
+                  <div>
+                    <h4 class="skill-name">CSS3</h4>
+                    <span class="skill-level-badge beginner">Beginner</span>
+                  </div>
+                </div>
+                <p class="skill-detail">Modern Flexbox, CSS Grid, media queries, custom properties, and keyframe animations.</p>
+              </div>
+
             </div>
-            <p class="skill-level">Intermediate — 80%</p>
-          </article>
+          </div>
 
-          <!-- Skill Card 3 -->
-          <article class="skill-card">
-            <div class="skill-icon">⚡</div>
-            <p class="skill-name">JavaScript</p>
-            <p class="skill-category">Web Frontend</p>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" style="width: 60%;"></div>
+          <!-- Category 3: Areas of Interest -->
+          <div class="skills-category-block full-width">
+            <h3 class="category-title">
+              <span class="category-icon">🚀</span>
+              <span>Areas of Interest</span>
+            </h3>
+            <div class="interests-grid">
+              
+              <div class="interest-card">
+                <div class="interest-icon">🧠</div>
+                <h4 class="interest-title">Artificial Intelligence</h4>
+                <p class="interest-desc">Exploring intelligent agent design, search algorithms, and modern cognitive paradigms.</p>
+              </div>
+
+              <div class="interest-card">
+                <div class="interest-icon">🤖</div>
+                <h4 class="interest-title">Machine Learning</h4>
+                <p class="interest-desc">Understanding predictive modeling, data features, and machine learning fundamentals.</p>
+              </div>
+
+              <div class="interest-card">
+                <div class="interest-icon">💬</div>
+                <h4 class="interest-title">Large Language Models (LLMs)</h4>
+                <p class="interest-desc">Studying prompting techniques, transformer architectures, tokenization, and LLM pipelines.</p>
+              </div>
+
+              <div class="interest-card">
+                <div class="interest-icon">💻</div>
+                <h4 class="interest-title">Web Development</h4>
+                <p class="interest-desc">Creating clean, fast, and accessible user interfaces that run effortlessly on the web.</p>
+              </div>
+
+              <div class="interest-card">
+                <div class="interest-icon">💡</div>
+                <h4 class="interest-title">Problem Solving</h4>
+                <p class="interest-desc">Tackling algorithmic challenges and building computational thinking every day.</p>
+              </div>
+
+              <div class="interest-card">
+                <div class="interest-icon">✨</div>
+                <h4 class="interest-title">AI-Powered Applications</h4>
+                <p class="interest-desc">Prototyping software solutions that leverage AI models to deliver real value to users.</p>
+              </div>
+
             </div>
-            <p class="skill-level">Beginner — 60%</p>
-          </article>
+          </div>
 
-          <!-- Skill Card 4 -->
-          <article class="skill-card">
-            <div class="skill-icon">☕</div>
-            <p class="skill-name">Java</p>
-            <p class="skill-category">Programming Language</p>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" style="width: 65%;"></div>
-            </div>
-            <p class="skill-level">Intermediate — 65%</p>
-          </article>
+        </div>
 
-          <!-- Skill Card 5 -->
-          <article class="skill-card">
-            <div class="skill-icon">🗄️</div>
-            <p class="skill-name">SQL</p>
-            <p class="skill-category">Database</p>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" style="width: 55%;"></div>
-            </div>
-            <p class="skill-level">Beginner — 55%</p>
-          </article>
-
-          <!-- Skill Card 6 -->
-          <article class="skill-card">
-            <div class="skill-icon">🔀</div>
-            <p class="skill-name">Git &amp; GitHub</p>
-            <p class="skill-category">Version Control</p>
-            <div class="skill-bar-track">
-              <div class="skill-bar-fill" style="width: 70%;"></div>
-            </div>
-            <p class="skill-level">Intermediate — 70%</p>
-          </article>
-
-          <!-- TODO: Add more skill cards following the same pattern -->
-
-        </div><!-- /skills-grid -->
-      </div><!-- /container -->
+      </div>
     </section>
 
-    <div class="gradient-divider" aria-hidden="true"></div>
+    <div class="section-divider" aria-hidden="true"></div>
 
     <!-- ════════════════════════════════════════════════════════
-         SECTION 4 — ACHIEVEMENTS
+         SECTION 4 — PROJECTS
          ════════════════════════════════════════════════════════ -->
-    <section id="achievements" aria-labelledby="achievements-heading">
+    <section id="projects" class="projects-section" aria-labelledby="projects-title">
       <div class="container">
-        <header class="section-header center">
-          <span class="section-label">Milestones</span>
-          <h2 class="section-title" id="achievements-heading">
-            Achievements &amp; <span class="hl">Certificates</span>
+
+        <div class="section-heading-wrapper center">
+          <span class="section-subtitle">Featured Work</span>
+          <h2 class="section-title" id="projects-title">
+            Featured <span class="gradient-text">Projects</span>
           </h2>
-          <p class="section-sub">
-            <!-- TODO: Update this description -->
-            Recognitions and certifications earned throughout my academic
-            and personal journey.
+          <p class="section-description">
+            A showcase of web applications, AI/LLM interactive tools, and experimental prototypes I have built and am developing.
           </p>
-        </header>
+          <div class="title-underline"></div>
+        </div>
 
-        <!--
-          TODO: Replace each achievement card with your real awards / certificates.
-          • ach-gold / ach-blue / ach-green / ach-purple — icon background colour
-          • Change the emoji, title, description, and tag
-          Add or remove cards as needed.
-        -->
-        <div class="achievements-grid">
-
-          <article class="achievement-card">
-            <div class="achievement-icon ach-gold">🏆</div>
-            <div class="achievement-body">
-              <!-- TODO: Replace with your actual achievement -->
-              <h3>Hackathon Winner — 1st Place</h3>
-              <p>Won first place at [Hackathon Name] for building [Project Name] within 24 hours.</p>
-              <span class="achievement-tag">2024</span>
-            </div>
-          </article>
-
-          <article class="achievement-card">
-            <div class="achievement-icon ach-blue">📜</div>
-            <div class="achievement-body">
-              <!-- TODO: Replace with your actual certificate -->
-              <h3>Python for Everybody — Certificate</h3>
-              <p>Completed the Python specialisation course on [Platform Name] with distinction.</p>
-              <span class="achievement-tag">Coursera</span>
-            </div>
-          </article>
-
-          <article class="achievement-card">
-            <div class="achievement-icon ach-green">🎓</div>
-            <div class="achievement-body">
-              <!-- TODO: Replace with your actual achievement -->
-              <h3>Dean's List — Semester 4</h3>
-              <p>Recognised for outstanding academic performance with a GPA above 9.0.</p>
-              <span class="achievement-tag">Academic</span>
-            </div>
-          </article>
-
-          <article class="achievement-card">
-            <div class="achievement-icon ach-purple">🌟</div>
-            <div class="achievement-body">
-              <!-- TODO: Replace with your actual achievement -->
-              <h3>Open Source Contributor</h3>
-              <p>Made meaningful contributions to [Repository Name] fixing bugs and adding features.</p>
-              <span class="achievement-tag">Open Source</span>
-            </div>
-          </article>
-
-          <article class="achievement-card">
-            <div class="achievement-icon ach-gold">🏅</div>
-            <div class="achievement-body">
-              <!-- TODO: Replace with your actual achievement -->
-              <h3>Best Paper Award</h3>
-              <p>Presented a paper on [Topic] at [Conference / Symposium Name] and received the best paper award.</p>
-              <span class="achievement-tag">Research</span>
-            </div>
-          </article>
-
-          <article class="achievement-card">
-            <div class="achievement-icon ach-blue">☁️</div>
-            <div class="achievement-body">
-              <!-- TODO: Replace with your actual certificate -->
-              <h3>Cloud Fundamentals — Certificate</h3>
-              <p>Earned certification in [Cloud Provider] fundamentals covering core services and architecture.</p>
-              <span class="achievement-tag">Cloud</span>
-            </div>
-          </article>
-
-        </div><!-- /achievements-grid -->
-      </div><!-- /container -->
-    </section>
-
-    <div class="gradient-divider" aria-hidden="true"></div>
-
-    <!-- ════════════════════════════════════════════════════════
-         SECTION 5 — PROJECTS
-         ════════════════════════════════════════════════════════ -->
-    <section id="projects" aria-labelledby="projects-heading">
-      <div class="container">
-        <header class="section-header center">
-          <span class="section-label">My Work</span>
-          <h2 class="section-title" id="projects-heading">
-            Featured <span class="hl">Projects</span>
-          </h2>
-          <p class="section-sub">
-            <!-- TODO: Update this description -->
-            A selection of projects I've built to learn, experiment, and solve problems.
-          </p>
-        </header>
-
-        <!--
-          TODO: Replace each project card with your actual projects:
-            • Change the emoji / thumbnail background gradient
-            • Update status badge: status-done / status-wip / status-idea
-            • Fill in project-title, project-desc, tags
-            • Replace # in project-link hrefs with your GitHub / Live URL
-          Add or remove cards as needed.
-        -->
         <div class="projects-grid">
 
-          <!-- Project 1 -->
+          <!-- PROJECT 1: TRUSTSHIELD AI -->
           <article class="project-card">
-            <div class="project-thumb">
-              <!-- TODO: Replace emoji with a screenshot <img> once you have one -->
-              <div class="project-thumb-bg" style="background: linear-gradient(135deg, #0d1b3e, #1a2a5e);">
-                🌐
+            <div class="project-thumb thumb-shield">
+              <div class="thumb-badge badge-wip">In Progress</div>
+              <div class="thumb-graphic">
+                <span class="thumb-symbol">🛡️</span>
+                <span class="thumb-ambient-text">TrustShield AI</span>
               </div>
-              <span class="project-status status-done">Completed</span>
             </div>
             <div class="project-body">
-              <!-- TODO: Replace with your actual project name -->
-              <h3 class="project-title">Personal Portfolio Website</h3>
-              <p class="project-desc">
-                <!-- TODO: Replace with your actual project description -->
-                A responsive portfolio website built from scratch using HTML5 and CSS3.
-                Features dark theme, smooth animations, and a clean layout.
-              </p>
-              <div class="project-tags">
-                <!-- TODO: Update tags to match your tech stack -->
-                <span class="tag">HTML5</span>
-                <span class="tag">CSS3</span>
-                <span class="tag">Responsive</span>
+              <div class="project-title-row">
+                <h3 class="project-title">TrustShield AI</h3>
               </div>
-              <div class="project-links">
-                <!-- TODO: Replace # with your GitHub repo URL -->
-                <a href="#" class="project-link" target="_blank" rel="noopener">
-                  <span class="icon">⌥</span> GitHub
-                </a>
-                <!-- TODO: Replace # with your live demo URL (or remove if no demo) -->
-                <a href="#" class="project-link" target="_blank" rel="noopener">
-                  <span class="icon">↗</span> Live Demo
+              <p class="project-desc">
+                TrustShield AI is an ongoing project. Explore the repository to learn more about its development and implementation.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag editable-tag">AI / Security</span>
+                <span class="tech-tag editable-tag">Python</span>
+                <span class="tech-tag editable-tag">In Development</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/kushal037101/TrustShield-Ai" target="_blank" rel="noopener noreferrer" class="btn btn-card-primary">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>GitHub Repository</span>
                 </a>
               </div>
             </div>
           </article>
 
-          <!-- Project 2 -->
+          <!-- PROJECT 2: KUSHAL SEARCH -->
           <article class="project-card">
-            <div class="project-thumb">
-              <div class="project-thumb-bg" style="background: linear-gradient(135deg, #1a0a2e, #2d1060);">
-                🤖
+            <div class="project-thumb thumb-search">
+              <div class="thumb-badge badge-live">Live</div>
+              <div class="thumb-graphic">
+                <span class="thumb-symbol">🔍</span>
+                <span class="thumb-ambient-text">Kushal Search</span>
               </div>
-              <span class="project-status status-wip">In Progress</span>
             </div>
             <div class="project-body">
-              <h3 class="project-title">
-                <!-- TODO: Replace with your actual project name -->
-                AI-Powered Chatbot
-              </h3>
-              <p class="project-desc">
-                <!-- TODO: Replace with your actual project description -->
-                A rule-based chatbot built in Python that answers FAQs for a
-                college department. Currently adding NLP capabilities.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Python</span>
-                <span class="tag">NLP</span>
-                <span class="tag">Flask</span>
+              <div class="project-title-row">
+                <h3 class="project-title">Kushal Search</h3>
               </div>
-              <div class="project-links">
-                <a href="#" class="project-link" target="_blank" rel="noopener">
-                  <span class="icon">⌥</span> GitHub
+              <p class="project-desc">
+                My own search engine project, built to explore search experiences and web technologies.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag editable-tag">Web Technologies</span>
+                <span class="tech-tag editable-tag">Search Engine</span>
+                <span class="tech-tag editable-tag">Vercel</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://kushalseach.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-card-primary">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  <span>Live Website</span>
                 </a>
               </div>
             </div>
           </article>
 
-          <!-- Project 3 -->
+          <!-- PROJECT 3: PIPELINE EXPLORER -->
           <article class="project-card">
-            <div class="project-thumb">
-              <div class="project-thumb-bg" style="background: linear-gradient(135deg, #001a10, #004d2e);">
-                🛒
+            <div class="project-thumb thumb-pipeline">
+              <div class="thumb-badge badge-live">Live</div>
+              <div class="thumb-graphic">
+                <span class="thumb-symbol">⚡</span>
+                <span class="thumb-ambient-text">Pipeline Explorer</span>
               </div>
-              <span class="project-status status-done">Completed</span>
             </div>
             <div class="project-body">
-              <h3 class="project-title">
-                <!-- TODO: Replace with your actual project name -->
-                E-commerce Store Clone
-              </h3>
-              <p class="project-desc">
-                <!-- TODO: Replace with your actual project description -->
-                A fully functional front-end clone of an e-commerce site with
-                product listings, cart, and responsive design.
-              </p>
-              <div class="project-tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">JavaScript</span>
+              <div class="project-title-row">
+                <h3 class="project-title">Pipeline Explorer</h3>
               </div>
-              <div class="project-links">
-                <a href="#" class="project-link" target="_blank" rel="noopener">
-                  <span class="icon">⌥</span> GitHub
-                </a>
-                <a href="#" class="project-link" target="_blank" rel="noopener">
-                  <span class="icon">↗</span> Live Demo
+              <p class="project-desc">
+                An interactive project exploring and visualizing LLM pipelines.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag editable-tag">LLM Architecture</span>
+                <span class="tech-tag editable-tag">Interactive Tool</span>
+                <span class="tech-tag editable-tag">Vercel</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://llm-pipeline-explorer-tyst.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-card-primary">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  <span>Live Website</span>
                 </a>
               </div>
             </div>
           </article>
 
-          <!-- Project 4 -->
+          <!-- PROJECT 4: LLM PLAYGROUND -->
           <article class="project-card">
-            <div class="project-thumb">
-              <div class="project-thumb-bg" style="background: linear-gradient(135deg, #1a0a00, #4d2600);">
-                📊
+            <div class="project-thumb thumb-playground">
+              <div class="thumb-badge badge-live">Live</div>
+              <div class="thumb-graphic">
+                <span class="thumb-symbol">🧪</span>
+                <span class="thumb-ambient-text">LLM Playground</span>
               </div>
-              <span class="project-status status-idea">Concept</span>
             </div>
             <div class="project-body">
-              <h3 class="project-title">
-                <!-- TODO: Replace with your actual project name -->
-                Data Dashboard
-              </h3>
-              <p class="project-desc">
-                <!-- TODO: Replace with your actual project description -->
-                An interactive data visualisation dashboard for analysing student
-                performance data. Built as a college mini-project.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Python</span>
-                <span class="tag">Pandas</span>
-                <span class="tag">Matplotlib</span>
+              <div class="project-title-row">
+                <h3 class="project-title">LLM Playground</h3>
               </div>
-              <div class="project-links">
-                <a href="#" class="project-link" target="_blank" rel="noopener">
-                  <span class="icon">⌥</span> GitHub
+              <p class="project-desc">
+                A project for experimenting with and exploring Large Language Model concepts.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag editable-tag">Large Language Models</span>
+                <span class="tech-tag editable-tag">AI Experiments</span>
+                <span class="tech-tag editable-tag">Vercel</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://llm-playground-fawn.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-card-primary">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                  <span>Live Website</span>
                 </a>
               </div>
             </div>
           </article>
 
-          <!-- TODO: Add more project cards following the same pattern -->
+        </div>
 
-        </div><!-- /projects-grid -->
-      </div><!-- /container -->
+      </div>
     </section>
 
-    <div class="gradient-divider" aria-hidden="true"></div>
+    <div class="section-divider" aria-hidden="true"></div>
 
     <!-- ════════════════════════════════════════════════════════
-         SECTION 6 — EDUCATION
+         SECTION 5 — CODING PROFILES (Competitive Programming)
          ════════════════════════════════════════════════════════ -->
-    <section id="education" aria-labelledby="education-heading">
+    <section id="coding-profiles" class="coding-profiles-section" aria-labelledby="profiles-title">
       <div class="container">
-        <header class="section-header center">
-          <span class="section-label">My Journey</span>
-          <h2 class="section-title" id="education-heading">
-            Academic <span class="hl">Background</span>
+
+        <div class="section-heading-wrapper center">
+          <span class="section-subtitle">Online Presence</span>
+          <h2 class="section-title" id="profiles-title">
+            Coding <span class="gradient-text">Profiles</span>
           </h2>
-        </header>
-
-        <!--
-          TODO: Replace each edu-item with your actual academic history.
-            • Update period, degree, school, description, and GPA badge.
-          Add or remove items as needed.
-        -->
-        <div class="education-timeline">
-
-          <!-- Education Item 1 — Most Recent First -->
-          <div class="edu-item">
-            <div class="edu-dot" aria-hidden="true">🎓</div>
-            <div class="edu-card">
-              <!-- TODO: Replace with your actual years -->
-              <p class="edu-period">2022 – Present</p>
-              <!-- TODO: Replace with your actual degree -->
-              <h3 class="edu-degree">Bachelor of Technology — Computer Science &amp; Engineering</h3>
-              <!-- TODO: Replace with your actual university -->
-              <p class="edu-school">XYZ University, City, State</p>
-              <!-- TODO: Replace with actual coursework / highlights -->
-              <p class="edu-desc">
-                Relevant coursework: Data Structures &amp; Algorithms, Database Systems,
-                Operating Systems, Computer Networks, Software Engineering.
-              </p>
-              <!-- TODO: Replace with your actual GPA -->
-              <span class="edu-gpa">CGPA: 8.5 / 10</span>
-            </div>
-          </div>
-
-          <!-- Education Item 2 -->
-          <div class="edu-item">
-            <div class="edu-dot" aria-hidden="true">📚</div>
-            <div class="edu-card">
-              <!-- TODO: Replace with your actual years -->
-              <p class="edu-period">2020 – 2022</p>
-              <!-- TODO: Replace with your actual qualification -->
-              <h3 class="edu-degree">Higher Secondary Certificate (HSC) — Science</h3>
-              <!-- TODO: Replace with your actual school -->
-              <p class="edu-school">ABC Junior College, City, State</p>
-              <!-- TODO: Replace with actual highlights -->
-              <p class="edu-desc">
-                Subjects: Physics, Chemistry, Mathematics, English.
-                Participated in inter-school science exhibition and quiz competitions.
-              </p>
-              <!-- TODO: Replace with your actual percentage / grade -->
-              <span class="edu-gpa">Percentage: 88%</span>
-            </div>
-          </div>
-
-          <!-- Education Item 3 -->
-          <div class="edu-item">
-            <div class="edu-dot" aria-hidden="true">🏫</div>
-            <div class="edu-card">
-              <!-- TODO: Replace with your actual years -->
-              <p class="edu-period">2010 – 2020</p>
-              <!-- TODO: Replace with your actual qualification -->
-              <h3 class="edu-degree">Secondary School Certificate (SSC)</h3>
-              <!-- TODO: Replace with your actual school -->
-              <p class="edu-school">DEF High School, City, State</p>
-              <p class="edu-desc">
-                Completed schooling with distinction. Active member of the
-                computer science and robotics clubs.
-              </p>
-              <!-- TODO: Replace with your actual percentage / grade -->
-              <span class="edu-gpa">Percentage: 92%</span>
-            </div>
-          </div>
-
-          <!-- TODO: Add more education items if needed -->
-
-        </div><!-- /education-timeline -->
-      </div><!-- /container -->
-    </section>
-
-    <div class="gradient-divider" aria-hidden="true"></div>
-
-    <!-- ════════════════════════════════════════════════════════
-         SECTION 7 — CONTACT
-         ════════════════════════════════════════════════════════ -->
-    <section id="contact" aria-labelledby="contact-heading">
-      <div class="container">
-        <header class="section-header center">
-          <span class="section-label">Get In Touch</span>
-          <h2 class="section-title" id="contact-heading">
-            Let's <span class="hl">Connect</span>
-          </h2>
-          <p class="section-sub">
-            Have a question, want to collaborate, or just say hello?
-            I'd love to hear from you!
+          <p class="section-description">
+            Track my algorithmic practice, open-source repositories, and professional network.
           </p>
-        </header>
+          <div class="title-underline"></div>
+        </div>
 
-        <div class="contact-wrapper">
+        <div class="profiles-grid">
 
-          <!-- Left: info -->
-          <div class="contact-info">
-            <h3>Reach Out Directly</h3>
-            <p>
-              <!-- TODO: Update this blurb -->
-              I'm currently open to internships, collaborations, and interesting
-              conversations. Feel free to drop me a message any time.
-            </p>
-
-            <div class="contact-items">
-              <!-- TODO: Replace with your actual email -->
-              <a href="mailto:your.email@example.com" class="contact-item">
-                <div class="contact-item-icon">✉️</div>
-                <span>your.email@example.com</span>
-              </a>
-
-              <!-- TODO: Replace with your actual phone (or remove entirely) -->
-              <div class="contact-item">
-                <div class="contact-item-icon">📱</div>
-                <span>+91 XXXXX XXXXX</span>
-              </div>
-
-              <!-- TODO: Replace with your actual location -->
-              <div class="contact-item">
-                <div class="contact-item-icon">📍</div>
-                <span>City, State, India</span>
-              </div>
+          <!-- GitHub Profile -->
+          <div class="profile-network-card">
+            <div class="network-icon-box github-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
             </div>
+            <div class="network-body">
+              <h3 class="network-name">GitHub</h3>
+              <p class="network-handle">@kushal037101</p>
+              <p class="network-desc">Open-source code repositories, version control, and ongoing project branches.</p>
+            </div>
+            <a href="https://github.com/kushal037101" target="_blank" rel="noopener noreferrer" class="btn btn-network">
+              <span>Visit Profile</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
 
-            <!-- Social links -->
-            <div class="social-links-row">
-              <!-- TODO: Replace # with your actual URLs -->
-              <a href="#" class="social-link-pill" target="_blank" rel="noopener">
-                ⌥ GitHub
-              </a>
-              <a href="#" class="social-link-pill" target="_blank" rel="noopener">
-                in LinkedIn
-              </a>
-              <a href="#" class="social-link-pill" target="_blank" rel="noopener">
-                𝕏 Twitter
-              </a>
-              <!-- TODO: Add Instagram, Discord, etc. as needed -->
+          <!-- Codeforces Profile -->
+          <div class="profile-network-card">
+            <div class="network-icon-box codeforces-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <rect x="1.5" y="9" width="5" height="13" rx="1.5" fill="#FFD400"/>
+                <rect x="9.5" y="4" width="5" height="18" rx="1.5" fill="#0070F3"/>
+                <rect x="17.5" y="13" width="5" height="9" rx="1.5" fill="#FF2D55"/>
+              </svg>
+            </div>
+            <div class="network-body">
+              <h3 class="network-name">Codeforces</h3>
+              <p class="network-handle">kushalpandya_037</p>
+              <p class="network-desc">Competitive programming contests, algorithm problem solving, and rating journey.</p>
+            </div>
+            <a href="https://codeforces.com/profile/kushalpandya_037" target="_blank" rel="noopener noreferrer" class="btn btn-network">
+              <span>Visit Profile</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+
+          <!-- LeetCode Profile -->
+          <div class="profile-network-card">
+            <div class="network-icon-box leetcode-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M13.483 0a1.374 1.374 0 00-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 00-1.209 2.104 5.35 5.35 0 00-.125.513 5.527 5.527 0 00.062 2.362 5.83 5.83 0 00.349 1.017 5.938 5.938 0 001.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 00-1.951-.003l-2.396 2.392a3.021 3.021 0 01-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 01.666-1.607L9.36 7.87l4.123-4.412a1.376 1.376 0 00-.001-1.955 1.37 1.37 0 00-.999-.438z" fill="#FFA116"/>
+                <path d="M9.852 14.286a1.378 1.378 0 000 1.949l2.42 2.42a1.379 1.379 0 001.95 0 1.378 1.378 0 000-1.949l-2.42-2.42a1.378 1.378 0 00-1.95 0z" fill="#B3B3B3"/>
+              </svg>
+            </div>
+            <div class="network-body">
+              <h3 class="network-name">LeetCode</h3>
+              <p class="network-handle">@xSQ9uckSaT</p>
+              <p class="network-desc">Data structures, algorithm challenges, and technical interview preparation.</p>
+            </div>
+            <a href="https://leetcode.com/u/xSQ9uckSaT/" target="_blank" rel="noopener noreferrer" class="btn btn-network">
+              <span>Visit Profile</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+
+          <!-- LinkedIn Profile -->
+          <div class="profile-network-card">
+            <div class="network-icon-box linkedin-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </div>
+            <div class="network-body">
+              <h3 class="network-name">LinkedIn</h3>
+              <p class="network-handle">kushal-pandya-562049423</p>
+              <p class="network-desc">Professional network, academic journey updates, and technology discussions.</p>
+            </div>
+            <a href="https://www.linkedin.com/in/kushal-pandya-562049423/" target="_blank" rel="noopener noreferrer" class="btn btn-network">
+              <span>Visit Profile</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ════════════════════════════════════════════════════════
+         SECTION 6 — ACHIEVEMENTS
+         ════════════════════════════════════════════════════════ -->
+    <section id="achievements" class="achievements-section" aria-labelledby="achievements-title">
+      <div class="container">
+
+        <div class="section-heading-wrapper center">
+          <span class="section-subtitle">Milestones &amp; Recognition</span>
+          <h2 class="section-title" id="achievements-title">
+            Achievements &amp; <span class="gradient-text">Certificates</span>
+          </h2>
+          <p class="section-description">
+            Honest placeholders marking ongoing academic and competitive milestones.
+          </p>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="achievements-grid">
+
+          <!-- Card 1: Academic Achievements -->
+          <div class="achievement-card">
+            <div class="achievement-icon icon-academic">🎓</div>
+            <div class="achievement-content">
+              <h3 class="achievement-heading">Academic Achievements</h3>
+              <p class="achievement-desc">
+                Engaging in coursework at Newton School of Technology, Pune with an emphasis on engineering fundamentals and AI theory.
+              </p>
+              <div class="status-pill">Active Journey</div>
             </div>
           </div>
 
-          <!-- Right: contact form -->
-          <div class="contact-form-card">
-            <!--
-              NOTE: This is a static HTML form — it does NOT send email on its own.
-              To make it functional, either:
-              1. Connect it to a service like Formspree (change action to your Formspree URL)
-              2. Use Netlify Forms (add netlify attribute)
-              3. Add your own backend
-
-              TODO: Update the action URL when you set up a form handler.
-            -->
-            <form
-              action="#"
-              method="POST"
-              aria-label="Contact form"
-            >
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="contact-name">Name</label>
-                  <input
-                    type="text"
-                    id="contact-name"
-                    name="name"
-                    placeholder="Your Name"
-                    required
-                    autocomplete="name"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="contact-email">Email</label>
-                  <input
-                    type="email"
-                    id="contact-email"
-                    name="email"
-                    placeholder="you@example.com"
-                    required
-                    autocomplete="email"
-                  />
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="contact-subject">Subject</label>
-                <input
-                  type="text"
-                  id="contact-subject"
-                  name="subject"
-                  placeholder="What's this about?"
-                />
-              </div>
-
-              <div class="form-group">
-                <label for="contact-message">Message</label>
-                <textarea
-                  id="contact-message"
-                  name="message"
-                  placeholder="Write your message here…"
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit" class="form-submit">
-                Send Message ✉️
-              </button>
-            </form>
+          <!-- Card 2: Coding Achievements -->
+          <div class="achievement-card">
+            <div class="achievement-icon icon-coding">⚡</div>
+            <div class="achievement-content">
+              <h3 class="achievement-heading">Coding Achievements</h3>
+              <p class="achievement-desc">
+                Consistent problem-solving on LeetCode and Codeforces, developing strong programming logic and algorithm skills.
+              </p>
+              <div class="status-pill">Practicing Regularly</div>
+            </div>
           </div>
 
-        </div><!-- /contact-wrapper -->
-      </div><!-- /container -->
+          <!-- Card 3: Certificates -->
+          <div class="achievement-card">
+            <div class="achievement-icon icon-certificate">📜</div>
+            <div class="achievement-content">
+              <h3 class="achievement-heading">Certificates</h3>
+              <p class="achievement-desc">
+                Upcoming technical certifications in Python, machine learning foundations, and modern software development.
+              </p>
+              <div class="status-pill">More achievements coming soon.</div>
+            </div>
+          </div>
+
+          <!-- Card 4: Competitions & Hackathons -->
+          <div class="achievement-card">
+            <div class="achievement-icon icon-competition">🏆</div>
+            <div class="achievement-content">
+              <h3 class="achievement-heading">Competitions &amp; Hackathons</h3>
+              <p class="achievement-desc">
+                Preparing and collaborating on student hackathons and college-level coding events.
+              </p>
+              <div class="status-pill">More achievements coming soon.</div>
+            </div>
+          </div>
+
+          <!-- Card 5: Awards and Recognition -->
+          <div class="achievement-card">
+            <div class="achievement-icon icon-awards">🌟</div>
+            <div class="achievement-content">
+              <h3 class="achievement-heading">Awards and Recognition</h3>
+              <p class="achievement-desc">
+                Honors and milestones earned throughout my undergraduate and technological pursuits.
+              </p>
+              <div class="status-pill">More achievements coming soon.</div>
+            </div>
+          </div>
+
+          <!-- Card 6: Coming Soon Notice Banner -->
+          <div class="achievement-card banner-card">
+            <div class="achievement-icon icon-future">🚀</div>
+            <div class="achievement-content">
+              <h3 class="achievement-heading">Future Milestones</h3>
+              <p class="achievement-desc">
+                As a first-year student, my journey has just begun. More achievements, certificates, and project milestones are coming soon!
+              </p>
+              <div class="status-pill highlight">Stay Tuned</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ════════════════════════════════════════════════════════
+         SECTION 7 — EDUCATION
+         ════════════════════════════════════════════════════════ -->
+    <section id="education" class="education-section" aria-labelledby="education-title">
+      <div class="container">
+
+        <div class="section-heading-wrapper center">
+          <span class="section-subtitle">Academic Path</span>
+          <h2 class="section-title" id="education-title">
+            Education <span class="gradient-text">Journey</span>
+          </h2>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="education-timeline-wrapper">
+          <div class="education-timeline">
+
+            <!-- Primary Entry: Newton School of Technology -->
+            <div class="timeline-item current-study">
+              <div class="timeline-marker">
+                <span class="marker-dot"></span>
+                <span class="marker-pulse"></span>
+              </div>
+              <div class="timeline-content-card">
+                <div class="timeline-header-row">
+                  <span class="timeline-period-badge">Current · 2024 – 2028 (Expected)</span>
+                  <span class="timeline-year-tag">First Year</span>
+                </div>
+                <h3 class="institution-name">Newton School of Technology, Pune</h3>
+                <h4 class="degree-title">Bachelor of Technology (B.Tech)</h4>
+                
+                <div class="academic-specs">
+                  <div class="spec-row">
+                    <span class="spec-label">Branch:</span>
+                    <span class="spec-val">Computer Science and Engineering (CSE)</span>
+                  </div>
+                  <div class="spec-row">
+                    <span class="spec-label">Specialization:</span>
+                    <span class="spec-val highlight-val">Artificial Intelligence and Machine Learning (AI &amp; ML)</span>
+                  </div>
+                  <div class="spec-row">
+                    <span class="spec-label">Current Status:</span>
+                    <span class="spec-val">First Year Undergraduate Student</span>
+                  </div>
+                </div>
+
+                <p class="timeline-notes">
+                  Focused on core computational thinking, Python programming, AI and ML foundations, discrete mathematics, and software project building.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- ════════════════════════════════════════════════════════
+         SECTION 8 — CONTACT
+         ════════════════════════════════════════════════════════ -->
+    <section id="contact" class="contact-section" aria-labelledby="contact-title">
+      <div class="container">
+
+        <div class="section-heading-wrapper center">
+          <span class="section-subtitle">Get In Touch</span>
+          <h2 class="section-title" id="contact-title">
+            Contact <span class="gradient-text">Me</span>
+          </h2>
+          <p class="section-description">
+            I'm always open to discussing technology, collaborative projects, AI ideas, or internship opportunities.
+          </p>
+          <div class="title-underline"></div>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Left: Contact Details & Quick Links -->
+          <div class="contact-info-column">
+            
+            <div class="contact-card-direct">
+              <div class="direct-icon-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="direct-text">
+                <span class="direct-label">Email Address</span>
+                <a href="mailto:kushalpandya037@gmail.com" class="direct-value email-link">
+                  kushalpandya037@gmail.com
+                </a>
+              </div>
+              <a href="mailto:kushalpandya037@gmail.com" class="btn btn-mail">
+                <span>Send Mail</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+
+            <!-- Social Links Card -->
+            <div class="contact-links-card">
+              <h3 class="links-card-title">Connect on Platforms</h3>
+              <div class="social-pills-container">
+                <a href="https://github.com/kushal037101" target="_blank" rel="noopener noreferrer" class="social-pill">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/kushal-pandya-562049423/" target="_blank" rel="noopener noreferrer" class="social-pill">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                  <span>LinkedIn</span>
+                </a>
+                <a href="https://codeforces.com/profile/kushalpandya_037" target="_blank" rel="noopener noreferrer" class="social-pill">
+                  <span class="pill-dot cf-dot"></span>
+                  <span>Codeforces</span>
+                </a>
+                <a href="https://leetcode.com/u/xSQ9uckSaT/" target="_blank" rel="noopener noreferrer" class="social-pill">
+                  <span class="pill-dot lc-dot"></span>
+                  <span>LeetCode</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="location-card">
+              <div class="location-icon">📍</div>
+              <div class="location-text">
+                <span class="location-title">Location</span>
+                <span class="location-desc">Pune, Maharashtra, India</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right: Static HTML Form Interface -->
+          <div class="contact-form-column">
+            <div class="contact-form-card">
+              <h3 class="form-title">Send a Message</h3>
+              <p class="form-subtitle">
+                Fill in the details below. (Note: A functional form backend or service like Formspree/Netlify is needed to deliver emails directly from static pages).
+              </p>
+
+              <form action="mailto:kushalpandya037@gmail.com" method="GET" class="contact-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="form-name">Your Name</label>
+                    <input type="text" id="form-name" name="name" placeholder="John Doe" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="form-email">Your Email</label>
+                    <input type="email" id="form-email" name="email" placeholder="john@example.com" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="form-subject">Subject</label>
+                  <input type="text" id="form-subject" name="subject" placeholder="Project Inquiry / Hello Kushal" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="form-message">Message</label>
+                  <textarea id="form-message" name="body" rows="4" placeholder="Hello Kushal, I came across your portfolio..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-submit">
+                  <span>Send Message</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </section>
 
   </main>
@@ -840,29 +920,30 @@
   <!-- ════════════════════════════════════════════════════════════
        FOOTER
        ════════════════════════════════════════════════════════════ -->
-  <footer role="contentinfo">
-    <div class="container">
-      <div class="footer-inner">
-        <!-- Logo -->
-        <span class="footer-logo">KP</span>
-
-        <!-- Copyright -->
-        <p class="footer-copy">
-          <!-- TODO: Update year as needed -->
-          &copy; 2025 Kushal Pandya. All rights reserved.
-        </p>
-
-        <!-- Quick links -->
-        <nav class="footer-links" aria-label="Footer navigation">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-container">
+      
+      <div class="footer-brand">
+        <a href="#home" class="footer-logo">
+          <span class="logo-accent">K</span>P
+        </a>
+        <p class="footer-creator">Designed &amp; Built by Kushal Pandya</p>
       </div>
+
+      <div class="footer-social-links">
+        <a href="https://github.com/kushal037101" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/kushal-pandya-562049423/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://codeforces.com/profile/kushalpandya_037" target="_blank" rel="noopener noreferrer" aria-label="Codeforces">Codeforces</a>
+        <a href="https://leetcode.com/u/xSQ9uckSaT/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">LeetCode</a>
+        <a href="mailto:kushalpandya037@gmail.com" aria-label="Email">Email</a>
+      </div>
+
+      <p class="footer-copyright">
+        &copy; 2026 Kushal Pandya. All Rights Reserved.
+      </p>
+
     </div>
   </footer>
 
 </body>
 </html>
-
